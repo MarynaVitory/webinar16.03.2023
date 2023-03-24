@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("./fonts/Rubik-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("./fonts/Rubik-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("./fonts/Rubik-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik Regular";
+}
+
+.container {
+    text-align: center;
+    min-width: 1440px;
+    margin: 0 auto;
+}
+
+.button {
+    height: 56px;
+    color: #fff;
+    font-size: 16px;
+    background-color: rgb(18, 86, 155);
+    border-radius: 28px;
+    border-color: transparent;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(18, 86, 155, 0.8);
+}
+
+.button:active {
+    background-color: rgba(18, 86, 155, 0.7);
+}
+
+.button__header {
+    width: 220px;
+}
+
+.header {
+    height: 570px;
+    display: flex;
+    background-color: rgb(228, 230, 237);
+    padding: 0 94px;
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    width: 1075px;
+    margin: 0 auto;
+}
+
+.header__content {
+    width: 445px;
+    text-align: left;
+    margin-top: 44px;
+}
+
+.header__icon {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.header__content h1 {
+    width: 280px;
+    font-family: "Rubik Bold";
+    font-size: 80px;
+    color: rgb(33, 32, 51);
+    line-height: 88%;
+    letter-spacing: 14px;
+    margin-bottom: 34px;
+}
+
+.header__dron {
+    height: 466px;
+}
+
+.main {
+    position: relative;
+    height: 580px;
+    padding: 63px 94px 0 94px;
+    margin: 0 auto;
+}
+
+.main h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: rgb(33, 32, 51);
+    letter-spacing: 0.5px;
+}
+
+.main p {
+    display: block;
+    width: 710px;
+    font-size: 20px;
+    color: rgb(33, 32, 51);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main p:last-of-type {
+    margin-bottom: 52px;
+}
+
+.main__images {
+    display: flex;
+    justify-content: center;
+}
+
+.main__images img {
+    height: 203px;
+    width: 345px;
+    border-radius: 12px;
+}
+
+.main__images img:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.main__images::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(228, 230, 237);
+    height: 99px;
+    width: 90%;
+    left: 0;
+    bottom: 138px;
+    z-index: -1;
+}
+
+.pay {
+    height: 370px;
+    margin: 0 auto;
+    padding: 0 94px;
+}
+
+.pay h2 {
+    font-family: "Rubik Medium";
+    font-size: 48px;
+    color: rgb(33, 32, 51);
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.pay__form form {
+    display: flex;
+    width: 822px;
+    margin: 0 auto;
+}
+
+.pay__fonds {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.pay__fonds label {
+    position: relative;
+    height: 44px;
+    width: 272px;
+    line-height: 44px;
+    color: rgb(12, 105, 197);
+}
+
+.pay__fonds *:first-child {
+    margin-bottom: 16px;
+}
+
+.pay__fonds label:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+input {
+    font-size: 18px;
+    padding-left: 24px;
+}
+
+input[type=radio] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=radio] ~ span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    background-color: transparent;
+    border: solid rgb(18, 86, 155) 1px;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+
+input[type=radio]:checked ~ span {
+    background-color: rgb(18, 86, 155, 0.2);
+}
+
+input[type=radio] ~ span::after {
+    content: "";
+}
+
+input[type=radio]:checked ~ span::after {
+    content: "✓";
+    right: 30px;
+    position: absolute;
+}
+
+.pay__first-card-col {
+    margin-left: 12px;
+    margin-right: 16px;
+}
+
+.pay__first-card-col > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay__first-card-col > div label {
+    display: inline-block;
+    width: 118px;
+}
+
+.pay__first-card-col > div label > input {
+    margin-top: 6px;
+}
+
+.pay__second-card-col input {
+    width: 100%;
+}
+
+.pay__card {
+    display: flex;
+    flex-direction: row;
+    width: 530px;
+}
+
+.pay__card > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pay__card label {
+    text-align: left;
+}
+
+.pay__card label > input {
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    border: solid rgb(18, 86, 155) 1px;
+    margin-top: 12px;
+}
+
+footer {
+    height: 163px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(18, 86, 155);
+    padding-top: 50px;
+}
+
+footer *:first-child {
+    letter-spacing: 3px;
+    margin-bottom: 23px;
+}

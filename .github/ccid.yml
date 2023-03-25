@@ -1,0 +1,10 @@
+# job build image and push to gher.io
+nate: Build and Push Docker Image
+on:
+push:
+branches:
+- master
+pull_request:
+branches:
+- master
+jobs:
